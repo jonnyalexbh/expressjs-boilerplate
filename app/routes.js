@@ -1,21 +1,19 @@
 const { myLogger } = require('./middlewares/logger');
+const { healthCheck } = require('./controllers/health_check');
+const { urlsNotFound } = require('./controllers/urls');
+const { getSample } = require('./controllers/samples');
 
 exports.init = (app) => {
-  app.get('/health', (req, res) => res.send('aaaaa'));
+  app.get('/health', healthCheck);
 
   /*  */
   app.get('/', (req, res) => {
-    const { name } = req.query;
     res.status(200).send({ message: 'Hello World' });
   });
 
-  /* Users */
-  app.get('/users', myLogger, (req, res) => {
-    res.status(200).send({ message: 'Hello Users' });
-  });
+  /* Samples */
+  app.get('/samples', myLogger, getSample);
 
   /* Not found middleware */
-  app.all('*', (req, res) => {
-    res.status(404).send({ message: `${req.url} not found`, internal_code: 'not_found_error' });
-  });
+  app.all('*', urlsNotFound);
 };

@@ -4,6 +4,13 @@
 $ npm init
 $ npm i express
 ```
+
+### Running project :
+``` bash
+$ npm run dev
+$ npm run start
+```
+
 ### Node JS Lib
 * express
 * pino
@@ -17,6 +24,7 @@ $ npm i express
 ```sh
 .
 ├── app/
+└── controllers               # contains controller files
 │   └── logger                # contains pino logger
 │   └── middlewares           # contains middlewares files
 │   └── routes.js             # routes config file
@@ -32,7 +40,9 @@ $ npm i express
 $ npm install --save-dev eslint
 $ npx eslint --init
 ```
-### Debugger VSCode
+
+<details>
+<summary><strong>Debugger VSCode</strong></summary>
 
 ```json
 {
@@ -87,8 +97,9 @@ $ npx eslint --init
     }
   ]
 }
-
 ```
+</details>
+
 ### License
 
 MIT
