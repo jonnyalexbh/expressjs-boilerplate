@@ -6,20 +6,31 @@ $ npm i express
 ```
 ### Node JS Lib
 * express
+* pino
+* pino-pretty
 
 ### Node JS Lib dev
 * nodemon
+* eslint
 
 ### Project Structure
 ```sh
 .
 ├── app/
+│   └── logger                # contains pino logger
 │   └── middlewares           # contains middlewares files
 │   └── routes.js             # routes config file
 ├── .gitignore                # specifies intentionally untracked files to ignore
 ├── app.js                    # app setup file
 └── package.json              # build scripts and dependencies
 
+```
+
+### Install eslint airbnb
+
+```sh
+$ npm install --save-dev eslint
+$ npx eslint --init
 ```
 ### Debugger VSCode
 
