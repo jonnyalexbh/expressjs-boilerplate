@@ -15,6 +15,7 @@ $ npm run start:dev
 * express
 * pino
 * pino-pretty
+* ajv
 
 ### Node JS Lib dev
 * nodemon
@@ -26,8 +27,10 @@ $ npm run start:dev
 .
 ├── app/
 │   └── controllers           # contains controller files
+│   └── errors                # contains errors files
 │   └── logger                # contains pino logger
 │   └── middlewares           # contains middlewares files
+│   └── schemas               # contains schemas files
 │   └── routes.js             # routes config file
 ├── config/                   # all configuration file here
 |   └── index.js              # app configuration
