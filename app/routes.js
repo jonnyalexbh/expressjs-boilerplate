@@ -1,6 +1,5 @@
 const { myLogger } = require('./middlewares/logger');
 const { healthCheck } = require('./controllers/health_check');
-const { urlsNotFound } = require('./controllers/urls');
 const { getSample } = require('./controllers/samples');
 
 exports.init = (app) => {
@@ -13,7 +12,4 @@ exports.init = (app) => {
 
   /* Samples */
   app.get('/samples', myLogger, getSample);
-
-  /* Not found middleware */
-  app.all('*', urlsNotFound);
 };

@@ -7,8 +7,8 @@ $ npm i express
 
 ### Running project :
 ``` bash
-$ npm run dev
 $ npm run start
+$ npm run start:dev
 ```
 
 ### Node JS Lib
@@ -24,15 +24,20 @@ $ npm run start
 ```sh
 .
 ├── app/
-└── controllers               # contains controller files
+│   └── controllers           # contains controller files
 │   └── logger                # contains pino logger
 │   └── middlewares           # contains middlewares files
 │   └── routes.js             # routes config file
 ├── .gitignore                # specifies intentionally untracked files to ignore
-├── app.js                    # app setup file
+├── app.js                    # API declaration (App entry point)
+├── server.js                 # server configuration
 └── package.json              # build scripts and dependencies
-
 ```
+## Code Style Guides
+* Guideline:
+  * Use camelCase for variable name, naming function
+  * Use UpperCase for Constant Variable
+  * Use snake_case for file name
 
 ### Install eslint airbnb
 
