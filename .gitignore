@@ -1,5 +1,9 @@
+# VS Code
+.vscode/
+
+# dotenv
+.env
+
 # Dependency directory
 node_modules
 
-# VS Code
-.vscode/

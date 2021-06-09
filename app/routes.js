@@ -1,6 +1,6 @@
 const { myLogger } = require('./middlewares/logger');
 const { healthCheck } = require('./controllers/health_check');
-const { getSample } = require('./controllers/samples');
+const { getSample, createSample } = require('./controllers/samples');
 
 exports.init = (app) => {
   app.get('/health', healthCheck);
@@ -12,4 +12,5 @@ exports.init = (app) => {
 
   /* Samples */
   app.get('/samples', myLogger, getSample);
+  app.post('/samples', createSample);
 };

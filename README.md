@@ -19,15 +19,19 @@ $ npm run start:dev
 ### Node JS Lib dev
 * nodemon
 * eslint
+* dotenv
 
 ### Project Structure
 ```sh
 .
 ├── app/
 │   └── controllers           # contains controller files
+│   └── errors                # contains errors files
 │   └── logger                # contains pino logger
 │   └── middlewares           # contains middlewares files
 │   └── routes.js             # routes config file
+├── config/                   # all configuration file here
+│   └── index.js              # app configuration
 ├── .gitignore                # specifies intentionally untracked files to ignore
 ├── app.js                    # API declaration (App entry point)
 ├── server.js                 # server configuration
