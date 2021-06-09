@@ -1,5 +1,13 @@
 # Express.js boilerplate
 
+## Core Stack
+
+- **Node.js**
+- **Express.js**
+- **Jest**
+
+## Start project
+
 ```sh
 $ npm init
 $ npm i express
@@ -7,6 +15,7 @@ $ npm i express
 
 ### Running project :
 ``` bash
+$ cp .env-sample .env
 $ npm run start
 $ npm run start:dev
 ```
@@ -20,6 +29,13 @@ $ npm run start:dev
 * nodemon
 * eslint
 * dotenv
+* jest
+
+## Unit testing
+
+``` bash
+$ npm run test
+```
 
 ### Project Structure
 ```sh
@@ -32,6 +48,7 @@ $ npm run start:dev
 │   └── routes.js             # routes config file
 ├── config/                   # all configuration file here
 │   └── index.js              # app configuration
+├── test/                     # contains test
 ├── .gitignore                # specifies intentionally untracked files to ignore
 ├── app.js                    # API declaration (App entry point)
 ├── server.js                 # server configuration
