@@ -19,18 +19,28 @@ $ cp .env-sample .env
 $ npm run start
 $ npm run start:dev
 ```
+## Dependencies
+Dependencies are managed through `package.json`.
+In that file you'll find two sections:
 
-### Node JS Lib
-* express
-* pino
-* pino-pretty
-* express-validator
+### `dependencies`
 
-### Node JS Lib dev
-* nodemon
-* eslint
-* dotenv
-* jest
+| Package                         | Description                                                           |
+| ------------------------------- | --------------------------------------------------------------------- |
+| express                         | Node.js web framework                                                 |
+| pino                            | Logging library                                                       |
+| pino-pretty                     | Module can be used to format logs                                     |
+| express-validator               | Easy form validation for Express                                      |
+
+### `devDependencies`
+
+| Package                         | Description                                                            |
+| ------------------------------- | ---------------------------------------------------------------------- |
+| nodemon                         | Utility that automatically restarts node process when it crashes       |
+| eslint                          | Linter for JavaScript and TypeScript files                             |
+| dotenv                          | Loads environment variables from .env file                             |
+| jest                            | Testing library for JavaScript                                         |
+| husky                           | Husky is a tool that allows us to easily wrangle Git hooks             |
 
 ## Unit testing
 
@@ -67,6 +77,12 @@ $ npm run test
 ```sh
 $ npm install --save-dev eslint
 $ npx eslint --init
+```
+
+### Install husky
+
+```sh
+$ npx husky-init
 ```
 
 <details>
