@@ -24,6 +24,7 @@ $ npm run start:dev
 * express
 * pino
 * pino-pretty
+* express-validator
 
 ### Node JS Lib dev
 * nodemon
@@ -41,14 +42,15 @@ $ npm run test
 ```sh
 .
 ├── app/
+│   └── constants             # contains constants files
 │   └── controllers           # contains controller files
 │   └── errors                # contains errors files
 │   └── logger                # contains pino logger
 │   └── middlewares           # contains middlewares files
+│   └── schemas               # contains schemas files
 │   └── routes.js             # routes config file
 ├── config/                   # all configuration file here
-│   └── index.js              # app configuration
-├── test/                     # contains test
+|   └── index.js              # app configuration
 ├── .gitignore                # specifies intentionally untracked files to ignore
 ├── app.js                    # API declaration (App entry point)
 ├── server.js                 # server configuration
